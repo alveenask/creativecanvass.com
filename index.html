@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>Creative canvas home page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="=UTF-8">
+ <meta name="viewport" content="width=device-width", initial-scale="1.0">
   <style>
     body {
     margin: 0;
@@ -39,15 +40,26 @@
    margin: 0;
  }
   
- .bg {  background-image: url("background.png");
-  
-  
-   height: 100%;
-  
- 
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+ body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+ }
+ .background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+ }
+ picture,img{
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+
  }
  </style>
  </head>
@@ -59,8 +71,9 @@
    
   </div>
  
-  <div style="padding-left:16px"></div>
-  <div class="bg"></div>
+ <picture class="background">
+   <img src="background.png">
+  </picture>
  </body>
 </html>
 
